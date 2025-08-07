@@ -11,7 +11,7 @@
 }
 
 body{
-    font-family: cursive;   
+    font-family: "Caveat" , cursive;   
 }
 
 main{
@@ -39,7 +39,7 @@ h1{
 }
 
 button{
-    font-family: cursive;
+    font-family: "Caveat" , cursive;
     padding: var(--main-unit);
     border-radius: 8px;
     cursor: pointer;
@@ -120,6 +120,7 @@ input[type="radio"]:checked + label{
 }
 
 .side input{
+    width: 100%;
     padding: var(--main-unit);
     border: var(--main-border);
     border-radius: 8px;

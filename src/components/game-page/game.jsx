@@ -67,16 +67,17 @@ export default function GameBoard() {
   useEffect(() => {
     winCells.current = checkWin();
     setWinState(() => winCells.current !== undefined);
-    console.log("Here", winCells.current, winState);
   }, [checkWin, winState]);
 
   return (
     <>
       <header>
-        {drawState === true ? <h1>NO WINNER</h1> : winState === false ? (
+        {drawState === true ? (
+          <h1>NO WINNER</h1>
+        ) : winState === false ? (
           <GameHeader currentPlayer={currentPlayer} />
         ) : (
-          <WinHeader winCells={winCells} xname={xname} oname={oname} />
+          <h1>{board[winCells.current[0]] === 'x' ? xname : oname} Wins</h1>
         )}
       </header>
       <main>
@@ -128,8 +129,4 @@ export default function GameBoard() {
       )}
     </>
   );
-}
-
-function WinHeader({ winCells, xname, oname }) {
-  return <h1>{winCells[0] === "x" ? xname : oname} Wins</h1>
 }
