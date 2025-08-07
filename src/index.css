@@ -1,219 +1,223 @@
-:root{
-    --primary-color: #eeee11;
-    --secondary-color: #011f8b;
-    --main-unit: 10px;
-    --main-border: 1px solid #011f8b;
+:root {
+  --primary-color: #eeee11;
+  --secondary-color: #011f8b;
+  --main-unit: 10px;
+  --main-border: 1px solid #011f8b;
 }
-*{
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
-
-body{
-    font-family: "Caveat" , cursive;   
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
-main{
-    margin-top: calc( var(--main-unit) * 3 );
+body {
+  font-family: "Caveat", cursive;
 }
 
-header{
-    margin-top: calc( var(--main-unit) * 3 );
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: var(--main-unit);
+main {
+  margin-top: calc(var(--main-unit) * 3);
 }
 
-section{
-    padding: calc( var(--main-unit) * 3 );
+header {
+  margin-top: calc(var(--main-unit) * 3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--main-unit);
 }
 
-h1{
-    text-align: center;
-    margin-bottom: var(--main-unit);
-    color: var(--primary-color);
-    font-size: 50px;
-    font-weight: bolder;
+section {
+  padding: calc(var(--main-unit) * 3);
 }
 
-button{
-    font-family: "Caveat" , cursive;
-    padding: var(--main-unit);
-    border-radius: 8px;
-    cursor: pointer;
-    transition: all .3s linear;    
+h1 {
+  text-align: center;
+  margin-bottom: var(--main-unit);
+  color: var(--primary-color);
+  font-size: 50px;
+  font-weight: bolder;
 }
 
-button:disabled{
-    cursor: auto;
-    opacity: .9;
+button {
+  font-family: "Caveat", cursive;
+  padding: var(--main-unit);
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s linear;
+}
+
+button:disabled {
+  cursor: auto;
+  opacity: 0.9;
 }
 .main-button {
-    display: block;
-    width: fit-content;
-    font-size: 20px;
-    color: var(--secondary-color);
-    background-color: var(--primary-color);
-    border: var(--main-border);
+  display: block;
+  width: fit-content;
+  font-size: 20px;
+  color: var(--secondary-color);
+  background-color: var(--primary-color);
+  border: var(--main-border);
 }
 
-main > button{
-    margin: 0 auto;
-}
-
-.main-button:hover{
-    color: var(--primary-color);
-    background-color: var(--secondary-color);
+main > button {
+  margin: 0 auto;
 }
 
 /* START PAGE */
-.choose-opponent{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: var(--main-unit);
+.choose-opponent {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--main-unit);
 }
 
-.opponent{
-    position: relative;
-    width: 150px;
-    height: 50px;
-    border: var(--main-border);
-    border-radius: 8px;
+.opponent {
+  position: relative;
+  width: 150px;
+  height: 50px;
+  border: var(--main-border);
+  border-radius: 8px;
 }
 
-.opponent label{
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 8px;
-    padding: calc( var(--main-unit) );
-    color: var(--secondary-color);
-    transition: all .3s linear;
-    cursor: pointer;
+.opponent label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  padding: calc(var(--main-unit));
+  color: var(--secondary-color);
+  transition: all 0.3s linear;
+  cursor: pointer;
 }
 
-input[type="radio"]{
-    appearance: none;
-}
-input[type="radio"]:hover + label{
-    color: var(--primary-color);
-    background-color: var(--secondary-color);    
-}
-input[type="radio"]:checked + label{
-    color: var(--primary-color);
-    background-color: var(--secondary-color);
+input[type="radio"] {
+  appearance: none;
 }
 
-.players-names{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    column-gap: var(--main-unit);
+input[type="radio"]:checked + label {
+  color: var(--primary-color);
+  background-color: var(--secondary-color);
 }
 
-.side input{
-    width: 100%;
-    padding: var(--main-unit);
-    border: var(--main-border);
-    border-radius: 8px;
+.players-names {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  column-gap: var(--main-unit);
 }
 
-.side input:focus{
-    outline: none;
+.side input {
+  width: 100%;
+  padding: var(--main-unit);
+  border: var(--main-border);
+  border-radius: 8px;
+}
+
+.side input:focus {
+  outline: none;
 }
 
 /* GAME PAGE */
-.player{
-    padding: calc( var(--main-unit) * 2 );
-    border-radius: 8px;
-    border: var(--main-border);
-    width: 150px;
-    text-align: center;
+.player {
+  padding: calc(var(--main-unit) * 2);
+  border-radius: 8px;
+  border: var(--main-border);
+  width: 150px;
+  text-align: center;
 }
 
-.player.active{
-    background-color: var(--secondary-color);
+.player.active {
+  background-color: var(--secondary-color);
 }
 
-.player .name{
-    padding: var(--main-unit);
-    text-align: center;
-    background-color: var(--secondary-color);
-    color: var(--primary-color);
-    border-radius: 16px;
-    text-wrap: auto;
+.player .name {
+  padding: var(--main-unit);
+  text-align: center;
+  background-color: var(--secondary-color);
+  color: var(--primary-color);
+  border-radius: 16px;
+  text-wrap: auto;
 }
 
-.player.active .name{
-    background-color: white;
+.player.active .name {
+  background-color: white;
 }
 
-.boardGrid{
-    width: fit-content;
-    margin: 0 auto;
-    list-style: none;
-    display: grid;
-    grid-template-columns: repeat( 3 , 100px );
-    grid-template-rows: repeat( 3 , 100px );
-    border-radius: 8px;
-    overflow: hidden;
+.boardGrid {
+  width: fit-content;
+  margin: 0 auto;
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(3, 100px);
+  grid-template-rows: repeat(3, 100px);
+  border-radius: 8px;
+  overflow: hidden;
 }
 
-.cell button{
-    width: 100%;
-    height: 100%;
-    background-color: white;
-    border: var(--main-border);
-    border-radius: 8px;
-    font-size: 45px;
-    font-weight: 500;
-    color: #011f8b;
-}
-.cell button:hover:not(:disabled){
-    background-color: #eee;
-}
-.win-cell button{
-    background-color: var(--primary-color);
+.cell button {
+  width: 100%;
+  height: 100%;
+  background-color: white;
+  border: var(--main-border);
+  border-radius: 8px;
+  font-size: 45px;
+  font-weight: 500;
+  color: #011f8b;
 }
 
+.win-cell button {
+  background-color: var(--primary-color);
+}
 
 #history ul {
-    list-style: none;
-    margin-top: 10px;
-    display: flex;
-    flex-direction: column;
-    gap: 5px;
+  list-style: none;
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
 }
-#history button{
-    width: 100%;
-    padding: 3px;
-    border: 1px solid var(--secondary-color);
-    background-color: white;
-    color: var(--secondary-color);   
-    transition: background-color .3s linear;
-}
-#history button:hover:not(:disabled,#undo){
-    background-color: #eee;
-}
-button#undo {
-    background-color: var(--secondary-color);
-    color: white;
-}
-button#undo:hover{
-    opacity: .9;
+#history button {
+  width: 100%;
+  padding: 3px;
+  border: 1px solid var(--secondary-color);
+  background-color: white;
+  color: var(--secondary-color);
+  transition: background-color 0.3s linear;
 }
 
-#resetButtons{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 10px;
+button#undo {
+  background-color: var(--secondary-color);
+  color: white;
+}
+
+#resetButtons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+@media (hover: hover) {
+  .main-button:hover {
+    color: var(--primary-color);
+    background-color: var(--secondary-color);
+  }
+  input[type="radio"]:hover + label {
+    color: var(--primary-color);
+    background-color: var(--secondary-color);
+  }
+  .cell button:hover:not(:disabled) {
+    background-color: #eee;
+  }
+  #history button:hover:not(:disabled, #undo) {
+    background-color: #eee;
+  }
+  button#undo:hover {
+    opacity: 0.9;
+  }
 }
