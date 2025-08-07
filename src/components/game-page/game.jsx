@@ -31,6 +31,7 @@ export default function GameBoard() {
   function handleCellClick(e) {
     if (e.target.parentElement.classList.contains("cell") === true) {
       const id = +e.target.parentElement.dataset.key;
+      if ( board[id] !== '' ) return ;
       setBoard((prev) => prev.map((c, i) => (i === id ? currentPlayer : c)));
       setHistory((prev) => [...prev, id]);
       setCurrentPlayer((prev) => (prev === "x" ? "o" : "x"));
