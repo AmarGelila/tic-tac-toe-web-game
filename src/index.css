@@ -11,7 +11,7 @@
 }
 
 body {
-  font-family: "Caveat", cursive;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
 main {
@@ -24,6 +24,7 @@ header {
   align-items: center;
   justify-content: center;
   gap: var(--main-unit);
+
 }
 
 section {
@@ -39,7 +40,7 @@ h1 {
 }
 
 button {
-  font-family: "Caveat", cursive;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
   padding: var(--main-unit);
   border-radius: 8px;
   cursor: pointer;
@@ -142,6 +143,8 @@ input[type="radio"]:checked + label {
   color: var(--primary-color);
   border-radius: 16px;
   text-wrap: auto;
+  font-size: 18px;
+  font-weight: bolder;
 }
 
 .player.active .name {
@@ -157,6 +160,7 @@ input[type="radio"]:checked + label {
   grid-template-rows: repeat(3, 100px);
   border-radius: 8px;
   overflow: hidden;
+
 }
 
 .cell button {
@@ -165,6 +169,7 @@ input[type="radio"]:checked + label {
   background-color: white;
   border: var(--main-border);
   border-radius: 8px;
+  font-family: "Caveat", cursive;
   font-size: 45px;
   font-weight: 500;
   color: #011f8b;
@@ -185,6 +190,8 @@ input[type="radio"]:checked + label {
   width: 100%;
   padding: 3px;
   border: 1px solid var(--secondary-color);
+  font-size: 18px;
+  font-weight: bolder;
   background-color: white;
   color: var(--secondary-color);
   transition: background-color 0.3s linear;
